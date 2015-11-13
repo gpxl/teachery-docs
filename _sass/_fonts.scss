@@ -1,0 +1,33 @@
+@font-face{
+  font-family:"Montserrat";
+  src: url("//www.teachery.co/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face{
+  font-family:"Montserrat";
+  src: url("//www.teachery.co/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Intro";
+  src: url("//www.teachery.co/Intro.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('//www.teachery.co/fontawesome-webfont.eot?v=4.4.0');
+  src: url('//www.teachery.co/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('//www.teachery.co/fontawesome-webfont.woff2?v=4.4.0') format('woff2'), url('//www.teachery.co/fontawesome-webfont.woff?v=4.4.0') format('woff'), url('www.teachery.co/fontawesome-webfont.ttf?v=4.4.0') format('truetype'), url('//www.teachery.co/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+  color: $green-lt;
+  &:hover {
+    color: $red;
+    text-decoration: none;
+  }
+}

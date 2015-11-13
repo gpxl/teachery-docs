@@ -1,0 +1,85 @@
+.hero {
+  background: url('/images/documentation-faq.jpg');
+  background-size: cover;
+  margin-bottom: $default-margin;
+  .text {
+    margin: ($default-margin * 2) 0;
+    padding: 25px 30px;
+    background: rgba(0,0,0,.5);
+    color: white;
+    h1 {
+      @include h1-header;
+      color: $white;
+    }
+    h2 {
+      @include h2-header;
+      color: $white;
+    }
+  }
+}
+.docs-list {
+  margin-bottom: $default-margin;
+  border: 1px solid $htgs-light;
+  .docs-row, .docs-heading {
+    border-bottom: 1px solid $htgs-light;
+  }
+  .docs-row a, .docs-heading {
+    display: block;
+    padding: ($default-margin / 4) 0 ($default-margin / 4) 30px;
+  }
+  .docs-row a {
+    span.fa {
+      position: relative;
+      top: -1px;
+      margin-left: -11px;
+      color: $slate;
+      font-size: 12px;
+    }
+  }
+  &.green {
+    .docs-heading {
+      background: $green;
+      color: $white;
+    }
+  }
+  &.orange {
+    .docs-heading {
+      background: $orange;
+      color: $white;
+    }
+    .docs-row a {
+      color: $orange;
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+  .docs-row a:hover {
+    background: $beige;
+  }
+  .docs-row:last-of-type {
+   border-bottom: none;
+ }
+
+}
+
+.faq-list {
+  h3 {
+    margin-bottom: ($default-margin / 2);
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .faq-row {
+    padding: 0 0 $default-margin 0;
+    margin-left: 30px;
+    margin-bottom: $default-margin;
+    border-bottom: 1px solid $htgs-light;
+  }
+  hr {
+    margin: $default-margin 0;
+  }
+}
+
+p {
+  margin-bottom: ($default-margin / 2);
+}

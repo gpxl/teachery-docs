@@ -1,23 +1,50 @@
 ---
 layout: default
 ---
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="hero">
+  <div class="container">
+    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+      <div class="text">
+        <h1>Documentation and Frequently Asked Questions</h1>
+        <h2>Want more information about Teachery? Here's a boatload.</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+    <div class="docs-list green">
+      <div class="docs-heading">
+        Documentation
+      </div>
+      {% for my_page in site.pages %}
+      {% if my_page.title %}
+      <div class="docs-row">
+        <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}"><span class="fa fa-file-text-o"></span> {{ my_page.title }}</a>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    <div class="docs-list orange">
+      <div class="docs-heading">
+        <a name="top"></a>
+        Frequently Asked Questions
+      </div>
+      {% for post in site.posts %}
+      <div class="docs-row">
+        <a class="post-link" href="#{{ post.title }}"><span class="fa fa-chevron-right"></span> {{ post.title }}</a>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="faq-list">
+      {% for post in site.posts %}
+      <div class="faq-row">
+        <a name="{{ post.title }}"></a>
+        <h3>{{ post.title }}</h3>
+        {{ post.content }}
+        <a href="#top" class="up-link"><span class="fa fa-arrow-up"></span> Back to top</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>
